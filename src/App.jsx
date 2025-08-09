@@ -1,16 +1,12 @@
-import useFetch from "./hooks/useFetch.jsx";
+import UniqueId from "./components/UniqueId.jsx";
+
 
 const App = () => {
-    const [data] = useFetch("https://jsonplaceholder.typicode.com/todos");
 
     return (
-        <div>
-            {data &&
-                data.map((item) => {
-                    return <p key={item.id}>{item.title}</p>;
-                })
-            }
-        </div>
+      <div>
+          <UniqueId/>
+      </div>
     )
 }
 export default App
